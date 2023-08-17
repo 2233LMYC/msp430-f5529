@@ -1,0 +1,32 @@
+GPIO_setAsOutputPin (GPIO_PORT_P1,GPIO_PIN0 );   GPIO输出
+GPIO_setAsInputPin (GPIO_PORT_P1, GPIO_PIN0)；GPIO输入
+
+GPIO_setOutputHighOnPin (GPIO_PORT_P1, GPIO_PIN0)；高电位输出
+GPIO_setOutputLowOnPin (GPIO_PORT_P1, GPIO_PIN0)；低电位输出
+
+GPIO_toggleOutputOnPin (GPIO_PORT_P1, GPIO_PIN0)；翻转电位
+
+GPIO_setAsInputPinWithPullDownResistor (GPIO_PORT_P1, GPIO_PIN0)；输入下拉电阻输入
+GPIO_setAsInputPinWithPullUpResistor (GPIO_PORT_P1, GPIO_PIN0)；上拉电阻输出
+
+GPIO_setAsPeripheralModuleFunctionOutputPin (GPIO_PORT_P1, uint16_tselectedPins)；配置输出外围模块（设置PWM）
+GPIO_setAsPeripheralModuleFunctionInputPin (GPIO_PORT_P1, uint16_tselectedPins)；配置输入外围模块
+
+GPIO_getInputPinValue (GPIO_PORT_P1, GPIO_PIN0)；获取引脚上的输入值
+
+GPIO_enableInterrupt (GPIO_PORT_P1, GPIO_PIN0)；启用引脚上的中断
+GPIO_disableInterrupt (GPIO_PORT_P1, GPIO_PIN0)；禁用中断
+
+GPIO_getInterruptStatus (GPIO_PORT_P1, GPIO_PIN0)；获取引脚中断状态
+
+GPIO_clearInterrupt (GPIO_PORT_P1, GPIO_PIN0)；清除中断标志
+
+GPIO_selectInterruptEdge (GPIO_PORT_P1, GPIO_PIN0, uint8_tedgeSelect)；设置一个中断标志为转换边缘
+
+GPIO_setDriveStrength (GPIO_PORT_P1, GPIO_PIN0, uint8_tdriveStrength)；设置端口的驱动器强度
+
+
+
+
+
+ 

@@ -1,0 +1,23 @@
+WDT_A_hold(WDT_A_BASE);    关闭看门狗（库工程）
+WDTCTL =WDTPW | WDTHOLD;关闭看门狗（自己的工程）
+__delay_cycles(1000000)；延迟
+
+#define CPU_F                           ((double)1000000)//CPU_F代表系统选用的主时钟大小，单位Hz
+#define delay_us(x)                      __delay_cycles((long)(CPU_F*(double)x/1000000.0))
+#define delay_ms(x)                      __delay_cycles((long)(CPU_F*(double)x/1000.0))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Writing by dwb

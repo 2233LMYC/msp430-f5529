@@ -1,0 +1,55 @@
+ADC10_A_init (uint16_t baseAddress, uint16_t sampleHoldSignalSourceSelect, uint8_tclockSourceSelect, uint16_t clockSourceDivider)；初始化ADC_10_A模块
+
+ADC10_A_enable (uint16_t baseAddress)；使能ADC_10_A
+ ADC10_A_disable (uint16_t baseAddress);禁用ADC_10_A
+
+ADC10_A_setupSamplingTimer (uint16_t baseAddress, uint16_t clockCycleHoldCount,uint16_t multipleSamplesEnabled)；设置并启用采样定时器脉冲模式
+
+ADC10_A_disableSamplingTimer (uint16_t baseAddress)；禁用采样计时器脉冲模式
+
+ADC10_A_configureMemory (uint16_t baseAddress, uint8_t inputSourceSelect, uint8_tpositiveRefVoltageSourceSelect, uint8_t negativeRefVoltageSourceSelect)； 配置所选内存缓冲区的控件。
+
+ADC10_A_enableInterrupt (uint16_t baseAddress, uint8_t interruptMask)；启用中断
+ ADC10_A_disableInterrupt (uint16_t baseAddress, uint8_t interruptMask)；禁用中断
+
+ ADC10_A_clearInterrupt (uint16_t baseAddress, uint8_t interruptFlagMask)；清除中断标志
+
+ （数值）ADC10_A_getInterruptStatus (uint16_t baseAddress, uint8_t interruptFlagMask)；获取中断状态标志
+
+ADC10_A_startConversion (uint16_t baseAddress, uint8_tconversionSequenceModeSelect)；启动AD转换
+
+ ADC10_A_disableConversions (uint16_t baseAddress, bool preempt)；禁止ADC转换成其它信号
+
+（数值） ADC10_A_getResults (uint16_t baseAddress)；获取缓冲区的原始内容
+
+ ADC10_A_setResolution (uint16_t baseAddress, uint8_t resolutionSelect)；更改分辨率
+
+ ADC10_A_setSampleHoldSignalInversion (uint16_t baseAddress, uint16_tinvertedSignal)；持续采样
+
+ ADC10_A_setDataReadBackFormat (uint16_t baseAddress, uint16_t readBackFormat)；用于设置转换后的数据的读回格式。
+
+ADC10_A_enableReferenceBurst (uint16_t baseAddress)；启用引用缓冲区的突发能力
+
+ADC10_A_disableReferenceBurst (uint16_t baseAddress)；禁用引用缓冲区的突发能力
+
+ADC10_A_setWindowComp (uint16_t baseAddress, uint16_t highThreshold, uint16_tlowThreshold)；设置窗口比较器功能的高和低阈值
+
+ （数值）ADC10_A_getMemoryAddressForDMA (uint16_t baseAddress)；获取 dma 模块的内存缓冲区的地址。
+
+ （数值）ADC10_A_isBusy (uint16_t baseAddress)；获取adc10a 内核的繁忙状态
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

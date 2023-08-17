@@ -1,0 +1,43 @@
+SMCLK=DCQCLK(1M Hz)  ACLK=REFO(32768 Hz)
+
+TACLK=SMCLK/(分频)
+定时器timerA
+Timer_A_startCounter (TIMER_A1_BASE,TIMER_A_CONTINUOUS_MODE )；启动计时器（连续模式,还有TIMER_A_STOP_MODE/TIMER_A_UP_MODE /TIMER_A_UPDOWN_MODE ）
+
+Timer_A_initContinuousMode (TIMER_A1_BASE,Timer_A_initContinuousModeParam ∗param);  连续模式下配置计时器A
+ 
+Timer_A_initUpMode (TIMER_A1_BASE, Timer_A_initUpModeParam ∗param);将计时器A设为上拉模式
+Timer_A_initUpDownMode (TIMER_A1_BASE, Timer_A_initUpDownModeParam∗param)；将计时器A设为上下拉模式
+Timer_A_initCaptureMode (TIMER_A1_BASE, Timer_A_initCaptureModeParam∗param)；将定时器设为捕获模式
+Timer_A_initCompareMode (TIMER_A1_BASE, Timer_A_initCompareModeParam∗param)；将定时器设为比较模式
+
+ Timer_A_enableInterrupt (TIMER_A1_BASE)；启用定时器中断
+ Timer_A_disableInterrupt (TIMER_A1_BASE)；禁用中断
+ （数值）Timer_A_getInterruptStatus (TIMER_A1_BASE)；获取中断状态
+
+ Timer_A_enableCaptureCompareInterrupt (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0)；启用比较中断
+ Timer_A_disableCaptureCompareInterrupt (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0)；禁用比较中断
+ （数值）Timer_A_getCaptureCompareInterruptStatus (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0, uint16_t mask)；返回比较中断状态
+
+Timer_A_clear (TIMER_A1_BASE)；复位计数器
+
+（数值）Timer_A_getSynchronizedCaptureCompareInput (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0, uint16_t synchronized)；获取同步比较
+（数值）Timer_A_getOutputForOutputModeOutBitValue (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0)；获取模式输出位
+（数值）Timer_A_getCaptureCompareCount(TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0)；获取当前值
+
+Timer_A_setOutputForOutputModeOutBitValue (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0, uint8_t outputModeOutBitValue)；设置模式为输出位
+
+Timer_A_outputPWM (TIMER_A1_BASE, Timer_A_outputPWMParam ∗param)；在启动模式下产生PWM
+
+Timer_A_stop (TIMER_A1_BASE)；停止计时
+
+Timer_A_setCompareValue (TIMER_A1_BASE, uint16_t compareRegister, uint16_tcompareValue)；设置比较计时器的值
+
+Timer_A_setOutputMode (TIMER_A1_BASE, uint16_t compareRegister, uint16_tcompareOutputMode)；把计时器设置为输出模式
+
+Timer_A_clearTimerInterrupt (TIMER_A1_BASE)；清除中断标志
+Timer_A_clearCaptureCompareInterrupt (TIMER_A1_BASE, TIMER_A_CAPTURECOMPARE_REGISTER_0)；清除捕获比较中断标志
+
+Timer_A_getCounterValue (TIMER_A1_BASE)；获取当前计数器的值
+
+

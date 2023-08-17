@@ -1,0 +1,58 @@
+ EUSCI_A_UART_init (uint16_t baseAddress, EUSCI_A_UART_initParam ∗param)；高级初始化
+
+EUSCI_A_UART_transmitData (uint16_t baseAddress, uint8_t transmitData)；当tx中断被禁止时这个会查询TX IFG标志
+
+ （数值）EUSCI_A_UART_receiveData (uint16_t baseAddress)；接收一个字节
+
+ EUSCI_A_UART_enableInterrupt (uint16_t baseAddress, uint8_t mask)；使能中断
+ EUSCI_A_UART_disableInterrupt (uint16_t baseAddress, uint8_t mask)；禁止中断
+
+ （数值）EUSCI_A_UART_getInterruptStatus (uint16_t baseAddress, uint8_t mask)；获取当前中断状态
+
+ EUSCI_A_UART_clearInterrupt (uint16_t baseAddress, uint16_t mask)；清除中断
+
+ EUSCI_A_UART_enable (uint16_t baseAddress)；启用UART
+EUSCI_A_UART_disable (uint16_t baseAddress)；禁用UART
+
+ （数值）EUSCI_A_UART_queryStatusFlags (uint16_t baseAddress, uint8_t mask)；获取当前中断标志
+
+ EUSCI_A_UART_setDormant (uint16_t baseAddress)；休眠UART
+
+EUSCI_A_UART_resetDormant (uint16_t baseAddress);唤醒UART
+
+ EUSCI_A_UART_transmitAddress (uint16_t baseAddress, uint8_t transmitAddress);根据选择的模式，标记下一字节
+
+EUSCI_A_UART_transmitBreak (uint16_t baseAddress)；中断传输
+
+ （数值）EUSCI_A_UART_getReceiveBufferAddress (uint16_t baseAddress)；设置RX端口的DMA
+ （数值）EUSCI_A_UART_getTransmitBufferAddress (uint16_t baseAddress)；设置TX端口的DMA
+
+ EUSCI_A_UART_selectDeglitchTime (uint16_t baseAddress, uint16_t deglitchTime)；设置故障时间
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

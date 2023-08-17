@@ -1,0 +1,60 @@
+ DMA_init (DMA_initParam ∗param)；初始化DMA频道
+
+DMA_setTransferSize (uint8_t channelSelect, uint16_t transferSize)；为选定的DMA设置传输量
+
+ （数值）DMA_getTransferSize (uint8_t channelSelect)；获取所选频道的传递量
+DMA_setSrcAddress (uint8_t channelSelect, uint32_t srcAddress, uint16_tdirectionSelect)；设置源地址和源地址在传输后移动的方向。
+DMA_setDstAddress (uint8_t channelSelect, uint32_t dstAddress, uint16_tdirectionSelect)；设置目标地址和目标地址在传输后移动的方向。
+
+ DMA_enableTransfers (uint8_t channelSelect)；使能传输
+ DMA_disableTransfers (uint8_t channelSelect)；禁用传输
+
+DMA_startTransfer (uint8_t channelSelect)；初始化触发源并开始传输
+
+DMA_enableInterrupt (uint8_t channelSelect)；启用所选频道的DMA中断
+ DMA_disableInterrupt (uint8_t channelSelect)；禁用所选频道中断
+
+（数值）DMA_getInterruptStatus (uint8_t channelSelect)；获取通道中的中断状态
+
+DMA_clearInterrupt (uint8_t channelSelect)；清除通道中的中断标志
+
+（数值）DMA_getNMIAbortStatus (uint8_t channelSelect)；获取所选通道的 NMIAbort 状态
+
+DMA_clearNMIAbort (uint8_t channelSelect)；清除NMIAbort状态
+
+DMA_disableTransferDuringReadModifyWrite (void)；禁止 dma 在读-修改-写操作期间停止 cpu 来传输。
+DMA_enableTransferDuringReadModifyWrite (void)；允许 dma 在读-修改-写操作期间停止 cpu 来传输。
+
+DMA_enableRoundRobinPriority (void)；启用循环优先级
+DMA_disableRoundRobinPriority (void)；禁用循环优先级
+
+DMA_enableNMIAbort (void)；允许 NMI 中断直接内存传输
+DMA_disableNMIAbort (void); 禁止NMI 中断直接内存传输
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
