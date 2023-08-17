@@ -12,6 +12,7 @@ ADC12_A_configureMemory (uint16_t baseAddress, uint8_t inputSourceSelect, uint8_
 ADC12_A_enableInterrupt (uint16_t baseAddress, uint8_t interruptMask)；启用中断
  ADC12_A_disableInterrupt (uint16_t baseAddress, uint8_t interruptMask)；禁用中断
 
+
  ADC12_A_clearInterrupt (uint16_t baseAddress, uint8_t interruptFlagMask)；清除中断标志
 
  （数值）ADC12_A_getInterruptStatus (uint16_t baseAddress, uint8_t interruptFlagMask)；获取中断状态标志
